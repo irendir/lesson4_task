@@ -49,14 +49,12 @@ function setNames() {
 function getMax() {
     //вывести на экран имя студента с максимальной оценкой
     for(var student of students) {
-        var max = student.avarage[0];
-    //     for (i = 1; i < students.length; i++) {
-    //         if (student.avarage[i] > max) {
-    //             max = student.avarage[i];
-    //         }
-    //     }
-    //     return max;
-    // }
+        var max = 0;
+        if (student.avarage > max) {
+            max = student.avarage;
+        }
+        console.log(student.name);
+    }
 }   
 
 function checkName() {
