@@ -46,14 +46,18 @@ function setNames() {
     }
 }
 
+var allAvarage = [];
 function getMax() {
     //вывести на экран имя студента с максимальной оценкой
     for(var student of students) {
-        var max = 0;
-        if (student.avarage > max) {
-            max = student.avarage;
+        var studentAvarage = student.avarage;
+        allAvarage.push(studentAvarage);
+    }
+    var max = Math.max.apply(null, allAvarage);
+    for(var student of students) {
+        if(student.avarage == max) {
+            alert(student.name);
         }
-        console.log(student.name);
     }
 }   
 
